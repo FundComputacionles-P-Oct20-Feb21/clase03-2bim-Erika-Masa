@@ -3,10 +3,21 @@
 3.      tabla, i[0-n]
 4.      valorLimite, i[0-n]
 5.      mensajeFinal, x(200)[{a-b}, {BS}, {*, =}] <-- ""
-6.      tabla <-- 3 
-7.      valorLimite <-- 10 
-8.      mensajeFinal <-- obtenerTabla(tabla, valorLimite)
+6.      tabla, i[o,n] 
+7.      valorLimite, i[o,n] 
+8.      op, i[0,n]
+9.		escribir "ingrese el numero a multiplicar"
+10.		leer tabla
+9.		escribir "ingrese el numero limite a multiplicar"
+10.		leer valorLimite
+11.		escribir"escriba 1 o 2"
+12.		leer op 
+6.      si(op == 1)entoces
+7.		mensajeFinal <--obtenerTablaMultiplicar(tabla, valorLimite)
 9.      Escribir mensajeFinal 
+10.		mensajeFinal <-- obtenerTablaSuma(tabla, valorLimite)
+9.      Escribir mensajeFinal 
+10.		fin si 
 10.  fin funcion principal 
 11.  
 11. // función para multiplicar
@@ -34,5 +45,4 @@
 20.     Fin Mientras
 21.     retorna mensaje
 22.  fin funcion obtenerTablaSuma
-
 23. Fin
